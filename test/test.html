@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LoopTesting</h1>
+    <ol>
+        
+    </ol>
+    <ul>
+        
+    </ul>
+    
+    <script>
+       
+        
+        
+        
+        let obj = {
+            name: "Zaw Lin Tun",
+            job: "Web Designer",
+            age: 21,
+            status: false,
+        };
+        
+        for (x in obj){
+            document.querySelector("ul").innerHTML += `<li>${x} - ${obj[x]}</li>`;
+        }
+        
+        for(x=1;x<=3;x++){
+            console.log(`${x}.Hello`);
+        }
+        
+        function sayHello(max){
+            for(x=1; x<=max;x++){
+                console.log(`${x}.Hello`);
+            }
+        }
+        </script>
+</body>
+</html>

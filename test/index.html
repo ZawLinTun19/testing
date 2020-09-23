@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    h1{
+    border: 2px solid blue;
+    padding: 10px 15px;
+    width: 300px;
+    }
+    div{	
+    margin-bottom: 20px;
+    }
+    input{
+    width: 200px;
+    padding: 10px 15px;
+	}
+    button{
+    padding: 10px 15px;
+		}
+        
+    </style>
+</head>
+<body>
+        <h1 id="result">Hello!</h1>
+        <div>
+            <input type="text" id="text" onkeyup="changeText()">
+            <button id="changeText">Change Text</button>
+        </div>
+        <div>
+            <input type="color" id="color" onchange="changeColor()">
+            <button id="changeColor">Change Color</button>
+        </div>
+        <div>
+            <input type="number" id="size">
+            <button id="changeSize" onclick="changeFontSize()">Change Size</button>
+        </div>
+        <script>
+            let result = document.querySelector("#result");
+        document.getElementById("changeText").onclick = function () {
+            result.innerHTML = document.querySelector("#text").value;
+
+        }
+
+        document.getElementById("changeColor").addEventListener("click",function () {
+            let x = document.querySelector("#color").value;
+            result.style.color = x;
+            console.log(`Change Color to ${x}   `);
+        });
+
+        function changeFontSize() {
+            let x = document.querySelector("#size").value;
+            result.style.fontSize = `${x}px`;
+        }
+
+        function changeColor() {
+            result.style.color = document.querySelector("#color").value;
+        }
+
+        function changeText() {
+            result.innerHTML = document.querySelector("#text").value;
+        }
+
+    </script>
+</body>
+</html>
